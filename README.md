@@ -1,6 +1,7 @@
 # Python Sorting Algorithms
 
-This project provides Python implementations of several common sorting algorithms within the `Sorting.py` file. These implementations are primarily intended for educational and demonstrational purposes, allowing users to study and compare the behavior of different sorting techniques.
+This project provides Python implementations of several common sorting algorithms within the `Sorting.py` file.
+These implementations are primarily intended for educational and demonstrational purposes, allowing users to study and compare the behavior of different sorting techniques.
 
 ## Helper Functions
 
