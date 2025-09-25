@@ -80,14 +80,20 @@ class RedBlackBST():
         else: 
             h.val = val
         
+        # Lean left: any red link on the right violates the left-leaning
+        # invariant, so rotate it to the left side before continuing.
         if self.isRed(h.right) and (not self.isRed(h.left)):
             h= self.rotateLeft(h)
             if h == None:
                 print(h)
+        # Balance a temporary 4-node formed by two consecutive left red links
+        # by rotating right. This restores perfect black balance.
         if self.isRed(h.left) and self.isRed(h.left.left):
             h= self.rotateRight(h)
             if h == None:
                 print(h)
+        # Split 4-nodes: both children red means we need to flip colors so the
+        # parent becomes red and the children black, preserving invariants.
         if self.isRed(h.left) and self.isRed(h.right):
             self.flipColors(h)
             if h == None:
