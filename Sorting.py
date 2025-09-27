@@ -99,19 +99,6 @@ class Quick:
         return j;
     
 
-if __name__ == "__main__":
-    case_Quick = Quick()
-    case_Quick.partition(a, 0, len(a)-1)
-    case_Quick.sort_main(a)
-    
-    case_Merge = Merge()
-    case_Merge.sort_main(a)
-    
-    case_MergeBU = MergeBU()
-    case_MergeBU.sort(a)
-            
-
-
 def merge(a, lo, mid, hi):
     i = lo
     j = mid +1
@@ -161,4 +148,15 @@ class MergeBU():
                 print("min = " + str(min(lo+sz+sz-1, N-1)))
                 merge(a, lo, lo+sz-1, min(lo+sz+sz-1, N-1))
                 lo = lo + sz+sz
-            sz = sz + sz  
+            sz = sz + sz
+
+if __name__ == "__main__":
+    case_Quick = Quick()
+    case_Quick.partition(a, 0, len(a)-1)
+    case_Quick.sort_main(a)
+    
+    case_Merge = Merge()
+    case_Merge.sort_main(a)
+    
+    case_MergeBU = MergeBU()
+    case_MergeBU.sort(a)

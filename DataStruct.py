@@ -23,24 +23,6 @@ class Node:
         self.next = newnext
         
         
-if __name__ == "__main__":
-    n1 = Node(123)
-    
-    BSST = BinarySearchST()
-    BSST.keys = [1, 2, 3, 4, 5]
-    BSST.vals = ['A', "B", "C", "D", "E"]
-    BSST.N = 5
-
-    BSST.rank(2, 0, len(BSST.keys))
-    BSST.get(3)
-
-    SST = SequentialSearchST()
-    #SST.first = SequentialSearchST.Node("A", 111)
-    SST.put("A", 111)
-    SST.put("B", 112)
-
-
-
 class Queue():
     def __init__(self):
         self.first = None
@@ -162,5 +144,19 @@ def main():
     for i, k in ST.items():
         print(i, k)
         print(ST[i])
-        
+
+if __name__ == "__main__":
+    n1 = Node(123)
     
+    BSST = BinarySearchST()
+    BSST.keys = [1, 2, 3, 4, 5]
+    BSST.vals = ['A', "B", "C", "D", "E"]
+    BSST.N = 5
+
+    BSST.rank(2, 0, len(BSST.keys))
+    BSST.get(3)
+
+    SST = SequentialSearchST()
+    #SST.first = SequentialSearchST.Node("A", 111)
+    SST.put("A", 111)
+    SST.put("B", 112)
