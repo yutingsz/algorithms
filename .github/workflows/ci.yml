@@ -25,9 +25,20 @@ jobs:
       uses: actions/cache@v4
       with:
         path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
+    
+    - name: Verify requirements.txt exists
+      run: |
+        echo "Current working directory:"
+        pwd
+        echo "Files in current directory:"
+        ls -la
+        echo "Checking requirements.txt:"
+        ls -la requirements.txt
+        echo "Requirements file contents:"
+        cat requirements.txt
     
     - name: Install dependencies
       run: |
