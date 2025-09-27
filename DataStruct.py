@@ -23,7 +23,21 @@ class Node:
         self.next = newnext
         
         
-n1 = Node(123)
+if __name__ == "__main__":
+    n1 = Node(123)
+    
+    BSST = BinarySearchST()
+    BSST.keys = [1, 2, 3, 4, 5]
+    BSST.vals = ['A', "B", "C", "D", "E"]
+    BSST.N = 5
+
+    BSST.rank(2, 0, len(BSST.keys))
+    BSST.get(3)
+
+    SST = SequentialSearchST()
+    #SST.first = SequentialSearchST.Node("A", 111)
+    SST.put("A", 111)
+    SST.put("B", 112)
 
 
 
@@ -140,20 +154,6 @@ class BinarySearchST():
         self.keys[i] = key
         self.values[i] = value
         self.N = self.N + 1
-        
-        
-BSST = BinarySearchST()
-BSST.keys = [1, 2, 3, 4, 5]
-BSST.vals = ['A', "B", "C", "D", "E"]
-BSST.N = 5
-
-BSST.rank(2, 0, len(BSST.keys))
-BSST.get(3)
-
-SST = SequentialSearchST()
-#SST.first = SequentialSearchST.Node("A", 111)
-SST.put("A", 111)
-SST.put("B", 112)
 
 def main():
     ST = {"A": 10}

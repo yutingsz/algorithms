@@ -50,9 +50,9 @@ class TrieST():
         return(x)
         
         
-tries_case = TrieST()
-
-tries_case.put_main("Abc", 2)
+if __name__ == "__main__":
+    tries_case = TrieST()
+    tries_case.put_main("Abc", 2)
 
 
 
@@ -109,6 +109,6 @@ class TST():
         return(x)
         
         
-tries_case = TST()
-
-tries_case.put_main("Abc", 2)
+if __name__ == "__main__":
+    tries_case = TST()
+    tries_case.put_main("Abc", 2)

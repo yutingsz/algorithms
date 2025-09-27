@@ -30,31 +30,28 @@ class LSD():
                 
                 
 
-LSD_Case = LSD()
+if __name__ == "__main__":
+    LSD_Case = LSD()
+    LSD_Case.sort(a, 7)
 
+    N= len(a)
+    W = 7
+    d = 6
+    N= len(a)
+    R =256
 
-LSD_Case.sort(a, 7)
+    aux = copy.deepcopy(a)
+    count_list = [0] * (R+1)
+    for i in range(0, N, 1):
+        count_list[ord(a[i][d])+1] = count_list[ord(a[i][d])+1] + 1
+        
+    for r in range(0, R, 1):
+        count_list[r+1] = count_list[r]+ count_list[r+1]
 
-
-N= len(a)
-W = 7
-d = 6
-N= len(a)
-R =256
-
-
-aux = copy.deepcopy(a)
-count_list = [0] * (R+1)
-for i in range(0, N, 1):
-    count_list[ord(a[i][d])+1] = count_list[ord(a[i][d])+1] + 1
-    
-for r in range(0, R, 1):
-    count_list[r+1] = count_list[r]+ count_list[r+1]
-
-for i in range(0, N, 1):
-    print(a[i][d])
-    aux[count_list[ord(a[i][d])]] = a[i]
-    count_list[ord(a[i][d])] = count_list[ord(a[i][d])] + 1
-    
-for i in range(0, N, 1):
-    a[i] = aux[i]
+    for i in range(0, N, 1):
+        print(a[i][d])
+        aux[count_list[ord(a[i][d])]] = a[i]
+        count_list[ord(a[i][d])] = count_list[ord(a[i][d])] + 1
+        
+    for i in range(0, N, 1):
+        a[i] = aux[i]

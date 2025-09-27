@@ -111,15 +111,15 @@ class RedBlackBST():
         #return(h)
         
         
-bst_case = RedBlackBST()
-
-bst_case.put_main("t", 10)
-bst_case.put_main("d", 30)
-bst_case.put_main("c", 40)
-bst_case.put_main("a", 11)
-bst_case.put_main("e", 22)
-bst_case.put_main("f", 3)
-bst_case.get_main("f")
+if __name__ == "__main__":
+    bst_case = RedBlackBST()
+    bst_case.put_main("t", 10)
+    bst_case.put_main("d", 30)
+    bst_case.put_main("c", 40)
+    bst_case.put_main("a", 11)
+    bst_case.put_main("e", 22)
+    bst_case.put_main("f", 3)
+    bst_case.get_main("f")
         
             
             

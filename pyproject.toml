@@ -30,6 +30,16 @@ Homepage = "https://github.com/yutingsz/algorithms"
 Repository = "https://github.com/yutingsz/algorithms"
 Issues = "https://github.com/yutingsz/algorithms/issues"
 
+[tool.setuptools]
+py-modules = [
+    "BST",
+    "TrieST", 
+    "String",
+    "DataStruct",
+    "Sorting",
+    "graph_search"
+]
+
 [project.optional-dependencies]
 dev = [
     "pytest>=7.4.0",
